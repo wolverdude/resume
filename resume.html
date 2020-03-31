@@ -18,13 +18,10 @@
       font-family: Tahoma;
       font-size: 0.13in;
     }
-    p, li, summary {
-      margin: 0 0.1in;
-    }
     article { margin: 0.2in 0; }
     section { margin: 0.1in 0; }
     h1, h2, h3, h4, h5, h6 {
-      margin: 0 0.1in 0.1in 0.1in;
+      margin: 0.1in 0;
       font-weight: bold;
     }
     h1 { font-size: 200%; }
@@ -32,33 +29,38 @@
     h3 { font-size: 110%; }
     h4 { font-size: 100%; }
     li { margin-left: 0.3in; }
+
     .page {
+      position: relative;
+      z-index: 0;
       background-color: white;
       border: 1px solid black;
       width: 8.5in;
       height: 11in;
-      overflow: scroll;
     }
     .page > .content {
       margin: 0.65in;
       width: 7.2in;
       height: 9.7in;
-      position: relative;
       border: 1px dotted black;
+      background-color: transparent;
     }
     .header {
+      position: absolute;
+      top: 0.65in;
+      left: 0.4in;
+      width: 7.7in;
       height: 1.1in;
+      z-index: -1;
       background-color: blue;
     }
-    .header-content {
-      margin-left: 2.4in;
-      padding-top: 0.3in;
-    }
-    .header-content h1 {
-      margin-top: 0;
-    }
     .footer {
+      position: absolute;
+      bottom: 0.35in;
+      left: 0.4in;
+      width: 7.7in;
       height: 0.3in;
+      z-index: -1;
       background-color: blue;
     }
     .body {
@@ -69,21 +71,17 @@
     }
     .main {
       width: 4.8in;
-      background-color: white;
+      padding: 0 0.2in 0.2in 0.2in;
     }
     .sidebar {
       width: 2.4in;
-      background-color: white;
+      padding: 0 0.2in 0.2in 0.2in;
     }
-
     #mugshot {
-      position: absolute;
-      z-index: 1;
-      left: 0.3in;
-      top: 0.3in;
       height: 2.4in;
       width: 1.8in;
-      background-color: #0000;
+      margin-top: 0.35in;
+      background-color: transparent;
       border-radius: 0.15in;
       box-shadow: 0 0 0.08in #444;
     }
@@ -93,6 +91,17 @@
       width: 100%;
       border: 0.02in solid whitesmoke;
     }
+    .header-content {
+      box-sizing: border-box;
+      height: 1.1in;
+      margin-top: 0;
+      padding-top: 0.3in;
+      color: whitesmoke;
+    }
+    .header-content > h1:first-child {
+      margin-top: 0;
+    }
+
     .occupation {
       font-size: 110%;
       font-weight: bold;
@@ -108,29 +117,26 @@
 </head>
 <body>
   <div class="page">
+    <div class="header"></div>
+    <div class="footer"></div>
     <div class="content">
-      <figure id="mugshot">
-        <img src="mugshot.jpg" />
-      </figure>
-      <div class="header">
-        <div class="header-content">
-          <h1>Jon Wolverton</h1>
-          <p class="occupation">Software Engineer</p>
-        </div>
-      </div>
       <div class="body">
         <div class="main">
+          <article class="header-content">
+            <h1>Jon Wolverton</h1>
+            <p class="occupation">Software Engineer</p>
+          </article>
           <article>
             <h2>Personal Statement</h2>
             <p>I am me.</p>
           </article>
           <article>
-            <h2>Work History</h2>
+            <h2>Experience</h2>
             <section>
               <h3>Epidemic Forecasting - Remote</h3>
               <section class="role">
                 <h4>Frontend Developer</h4>
-                <p class="dates">Sep 2013 – Jul 2015 (1 year 11 months)</p>
+                <p class="dates">Mar 2020 – present</p>
                 <p>I'm volunteering on a <a href="http://epidemicforecasting.org/">COVID-19 forecasting project</a> supported by the Oxford Future of Humanity Institute.</p>
               </section>
             </section>
@@ -149,7 +155,7 @@
               <section class="role">
                 <h4>Junior Instructor</h4>
                 <p class="dates">Aug 2015 – Aug 2016 (1 year)</p>
-                <p>As part of the instructional team, I taught React & Rails in a fast-paced learning environment. I learned and grew a lot in my technical knowledge and my interpersonal skills.</p>
+                <p>As part of the instructional team, I taught React & Rails in a fast-paced learning environment. Empathy, communication, technical knowledge, and debugging skills were all critical for this role.</p>
               </section>
             </section>
             <section>
@@ -161,13 +167,11 @@
               </section>
             </section>
           </article>
-          <article>
-            <h2>Core Competencies</h2>
-            <ul>
-              <li></li>
-              <li>Killing it</li>
-            </ul>
-          </article>
+        </div>
+        <div class="sidebar">
+          <figure id="mugshot">
+            <img src="mugshot.jpg" />
+          </figure>
           <article>
             <h2>Education</h2>
             <section class="role">
@@ -181,10 +185,15 @@
               <p>BA - International Studies</p>
             </section>
           </article>
+          <article>
+            <h2>Strengths</h2>
+            <ul>
+              <li>Diagnostics & Debugging</li>
+              <li>Team Player - works to support coworkers</li>
+            </ul>
+          </article>
         </div>
-        <div class="sidebar"></div>
       </div>
-      <div class="footer"></div>
     </div>
   </div>
 </body>
