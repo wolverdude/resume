@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=8.5in, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li
+    article, section, summary, figure {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    html {
+      font-family: Tahoma;
+      font-size: 0.13in;
+    }
+    p, li, summary {
+      margin: 0 0.1in;
+    }
+    article { margin: 0.2in 0; }
+    section { margin: 0.1in 0; }
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0.1in 0.1in 0.1in;
+      font-weight: bold;
+    }
+    h1 { font-size: 200%; }
+    h2 { font-size: 130%; }
+    h3 { font-size: 110%; }
+    h4 { font-size: 100%; }
+    li { margin-left: 0.3in; }
+    .page {
+      background-color: white;
+      border: 1px solid black;
+      width: 8.5in;
+      height: 11in;
+      overflow: scroll;
+    }
+    .page > .content {
+      margin: 0.65in;
+      width: 7.2in;
+      height: 9.7in;
+      position: relative;
+      border: 1px dotted black;
+    }
+    .header {
+      height: 1.1in;
+      background-color: blue;
+    }
+    .header-content {
+      margin-left: 2.4in;
+      padding-top: 0.3in;
+    }
+    .header-content h1 {
+      margin-top: 0;
+    }
+    .footer {
+      height: 0.3in;
+      background-color: blue;
+    }
+    .body {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+      height: 8.3in;
+    }
+    .main {
+      width: 4.8in;
+      background-color: white;
+    }
+    .sidebar {
+      width: 2.4in;
+      background-color: white;
+    }
+
+    #mugshot {
+      position: absolute;
+      z-index: 1;
+      left: 0.3in;
+      top: 0.3in;
+      height: 2.4in;
+      width: 1.8in;
+      background-color: #0000;
+      border-radius: 0.15in;
+      box-shadow: 0 0 0.08in #444;
+    }
+    #mugshot img {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      border: 0.02in solid whitesmoke;
+    }
+    .occupation {
+      font-size: 110%;
+      font-weight: bold;
+    }
+    .role { position: relative; }
+    .role .dates {
+      position: absolute;
+      overflow: visible;
+      top: 0;
+      left: 1.5in;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="content">
+      <figure id="mugshot">
+        <img src="mugshot.jpg" />
+      </figure>
+      <div class="header">
+        <div class="header-content">
+          <h1>Jon Wolverton</h1>
+          <p class="occupation">Software Engineer</p>
+        </div>
+      </div>
+      <div class="body">
+        <div class="main">
+          <article>
+            <h2>Personal Statement</h2>
+            <p>I am me.</p>
+          </article>
+          <article>
+            <h2>Work History</h2>
+            <section>
+              <h3>Epidemic Forecasting - Remote</h3>
+              <section class="role">
+                <h4>Frontend Developer</h4>
+                <p class="dates">Sep 2013 – Jul 2015 (1 year 11 months)</p>
+                <p>I'm volunteering on a <a href="http://epidemicforecasting.org/">COVID-19 forecasting project</a> supported by the Oxford Future of Humanity Institute.</p>
+              </section>
+            </section>
+            <section>
+              <h3>App Academy - San Francisco</h3>
+              <section class="role">
+                <h4>Software Engineer</h4>
+                <p class="dates">Jul 2019 – Jan 2020 (7 months)</p>
+                <p>I worked on a small Agile team that serviced education tools for the company. On that team, I had a specialized role of chief data analyst and data engineer for the company.</p>
+              </section>
+              <section class="role">
+                <h4>Selection Manager</h4>
+                <p class="dates">Sep 2016 – Jun 2019 (2 years 10 months)</p>
+                <p>I was in charge of setting and applying admissions standards. As a department head, I managed the selection process and a team of 10-15 people. I also analyzed data to improve our standards and ensure that they remained fair.</p>
+              </section>
+              <section class="role">
+                <h4>Junior Instructor</h4>
+                <p class="dates">Aug 2015 – Aug 2016 (1 year)</p>
+                <p>As part of the instructional team, I taught React & Rails in a fast-paced learning environment. I learned and grew a lot in my technical knowledge and my interpersonal skills.</p>
+              </section>
+            </section>
+            <section>
+              <h3>Sidecar Technologies - San Francisco</h3>
+              <section class="role">
+                <h4>Software Developer</h4>
+                <p class="dates">Sep 2013 – Jul 2015 (1 year 11 months)</p>
+                <p>I worked on the backend supporting multiple frontend applications for a ride-sharing and delivery service. I designed and built systems in Node.js and Python while also maintaining existing PHP code.</p>
+              </section>
+            </section>
+          </article>
+          <article>
+            <h2>Core Competencies</h2>
+            <ul>
+              <li></li>
+              <li>Killing it</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Education</h2>
+            <section class="role">
+              <h4>App Academy</h4>
+              <p class="dates">2013</p>
+              <p>Full-Stack Software Engineering</p>
+            </section>
+            <section class="role">
+              <h4>Cedarville University</h4>
+              <p class="dates">2011</p>
+              <p>BA - International Studies</p>
+            </section>
+          </article>
+        </div>
+        <div class="sidebar"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </div>
+</body>
+</html>
