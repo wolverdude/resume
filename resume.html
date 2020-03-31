@@ -45,23 +45,20 @@
       border: 1px dotted black;
       background-color: transparent;
     }
-    .header {
+    .header, .footer {
       position: absolute;
-      top: 0.65in;
       left: 0.4in;
       width: 7.7in;
-      height: 1.1in;
       z-index: -1;
       background-image: url("img/header.jpg");
     }
+    .header {
+      top: 0.65in;
+      height: 1.1in;
+    }
     .footer {
-      position: absolute;
       bottom: 0.35in;
-      left: 0.4in;
-      width: 7.7in;
       height: 0.3in;
-      z-index: -1;
-      background-image: url("img/header.jpg");
     }
     .code-overlay {
       width: 100%;
@@ -86,15 +83,11 @@
       height: 2.4in;
       width: 1.8in;
       margin-top: 0.35in;
-      background-color: transparent;
-      border-radius: 0.15in;
-      box-shadow: 0 0 0.08in #444;
-    }
-    #mugshot img {
       box-sizing: border-box;
-      height: 100%;
-      width: 100%;
       border: 0.02in solid whitesmoke;
+    }
+    .header, .footer, #mugshot {
+      box-shadow: 0 0 0.15in #444;
     }
     .header-content {
       box-sizing: border-box;
@@ -174,9 +167,7 @@
           </article>
         </div>
         <div class="sidebar">
-          <figure id="mugshot">
-            <img src="img/mugshot.jpg" />
-          </figure>
+          <img src="img/mugshot.jpg" id="mugshot" />
           <article>
             <h2>Education</h2>
             <section class="role">
