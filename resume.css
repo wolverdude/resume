@@ -127,6 +127,9 @@ li.bullet-email {
 li.bullet-phone {
   background-image: url("img/phone.svg");
 }
+li.bullet-location {
+  background-image: url("img/location.svg");
+}
 
 /* modular styles */
 .role { position: relative; }
