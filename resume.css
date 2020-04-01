@@ -152,6 +152,11 @@ li.bullet-location {
   left: 1.5in;
 }
 
+/* specific styles */
+.extra-line-spacing {
+  line-height: 150%;
+}
+
 /* print-specific styles */
 @media print {
   .page {
