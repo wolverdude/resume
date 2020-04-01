@@ -166,4 +166,10 @@ li.bullet-location {
     color: inherit;
     text-decoration: inherit;
   }
+  .header, .footer, #mugshot {
+    box-shadow: none;
+  }
+  #mugshot {
+    border-color: grey;
+  }
 }
