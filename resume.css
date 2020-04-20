@@ -133,6 +133,9 @@ li.bullet-linkedin {
 li.bullet-github {
   background-image: url("img/github.svg");
 }
+li.bullet-website {
+  background-image: url("img/website.svg");
+}
 li.bullet-email {
   background-image: url("img/email.svg");
 }
