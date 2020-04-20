@@ -58,13 +58,15 @@ li:before {
   flex-wrap: nowrap;
   height: 9.4in;
 }
+.main, .sidebar {
+  padding: 0 0.2in 0.2in 0.2in;
+  overflow: hidden;
+}
 .main {
   width: 4.8in;
-  padding: 0 0.2in 0.2in 0.2in;
 }
 .sidebar {
   width: 2.4in;
-  padding: 0 0.2in 0.2in 0.2in;
 }
 
 /* header & footer */
@@ -127,6 +129,12 @@ ul.custom-bullets li {
 ul.custom-bullets li:before {
   content: ""
 }
+li.bullet-email {
+  background-image: url("img/email.svg");
+}
+li.bullet-phone {
+  background-image: url("img/phone.svg");
+}
 li.bullet-linkedin {
   background-image: url("img/linkedin.svg");
 }
@@ -135,12 +143,6 @@ li.bullet-github {
 }
 li.bullet-website {
   background-image: url("img/website.svg");
-}
-li.bullet-email {
-  background-image: url("img/email.svg");
-}
-li.bullet-phone {
-  background-image: url("img/phone.svg");
 }
 li.bullet-location {
   background-image: url("img/location.svg");
