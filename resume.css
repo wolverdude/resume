@@ -149,13 +149,16 @@ li.bullet-location {
 }
 
 /* modular styles */
-.role { position: relative; }
-.role .dates {
+.employer, .role { position: relative; }
+.employer .location, .role .dates {
   position: absolute;
   overflow: visible;
   top: 0;
-  left: 1.5in;
+  right: 0;
 }
+.employer .location { font-weight: bold; }
+.role .dates { font-style: italic; }
+
 
 /* specific styles */
 .extra-line-spacing {
@@ -176,10 +179,7 @@ li.bullet-location {
     color: inherit;
     text-decoration: inherit;
   }
-  .header, .footer, #mugshot {
+  .header, .footer {
     box-shadow: none;
-  }
-  #mugshot {
-    border-color: grey;
   }
 }
