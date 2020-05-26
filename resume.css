@@ -4,13 +4,15 @@ article, section, summary, figure {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: inherit;
+  line-height: inherit;
   font: inherit;
   vertical-align: baseline;
 }
 html {
   font-family: Tahoma;
-  font-size: 0.13in;
+  font-size: 12.5px;
+  line-height: 15px;
   background-color: grey;
 }
 article { margin: 0.15in 0; }
@@ -19,10 +21,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.1in 0;
   font-weight: bold;
 }
-h1 { font-size: 180%; }
-h2 { font-size: 130%; }
-h3 { font-size: 110%; }
-h4 { font-size: 100%; }
+h1 {
+  font-size: 180%;
+  line-height: 140%;
+}
+h2 {
+  font-size: 130%;
+  line-height: 115%;
+}
+h3 {
+  font-size: 110%;
+  line-height: 105%;
+}
+h4 {
+  font-size: 100%;
+  line-height: 100%;
+}
 ul { list-style-type: none;}
 li {
   position: relative;
