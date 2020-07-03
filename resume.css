@@ -177,6 +177,8 @@ li.bullet-location {
 /* specific styles */
 .extra-line-spacing {
   line-height: 140%;
+  margin-top: 0.05in;
+  margin-bottom: 0.05in;
 }
 
 /* adjust font to fit more in the column */
