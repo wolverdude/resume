@@ -1,0 +1,177 @@
+/* normalize styles */
+html, body, div, span, hr, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li
+article, section, summary, figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  font-family: Tahoma;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: grey;
+}
+article { margin: 0.15in 0; }
+section { margin: 0.1in 0; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 7px 0;
+  font-weight: bold;
+  font-family: monospace;
+}
+h1 {
+  font-size: 200%;
+  line-height: 120%;
+}
+h2 {
+  font-size: 140%;
+  line-height: 110%;
+}
+h3 {
+  font-size: 120%;
+  line-height: 105%;
+}
+h4 {
+  font-size: 110%;
+  line-height: 100%;
+}
+ul { list-style-type: none;}
+li {
+  position: relative;
+  margin-left: 5px;
+  padding-left: 17px;
+}
+li:before {
+  content: "-";
+  font-weight: bold;
+  position: absolute;
+  left: 4px;
+}
+hr {
+  border-top: 2px solid black;
+}
+hr.thick {
+  border-top: 5px solid black;
+  position: relative;
+  left: -0.2in;
+  width: 7.6in;
+}
+
+/* layout */
+.page {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 0;
+  background-color: white;
+  width: 8.5in;
+  height: 11in;
+  margin: 0.5in auto;
+  padding: 0.65in;
+}
+.page > .content {
+  width: 7.2in;
+  height: 9.7in;
+  background-color: transparent;
+}
+
+/* modular styles */
+.employer, .role { position: relative; }
+.employer .location, .role .dates {
+  position: absolute;
+  overflow: visible;
+  top: 0;
+  right: 0;
+  font-family: monospace;
+}
+.employer .location {
+  font-weight: bold;
+  font-size: 115%;
+  line-height: 105%;
+}
+.role .dates {
+  font-style: italic;
+  font-size: 110%;
+  line-height: 100%;
+}
+
+
+/* specific styles */
+.extra-line-spacing {
+  line-height: 140%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.horizontal.center {
+  justify-content: center;
+}
+div.horizontal > .role {
+  width: 40%;
+  margin: 0;
+}
+div.horizontal > .role > h4 {
+  margin-top: 0;
+}
+ul.horizontal li:before {
+  content: "•";
+  font-size: 65%;
+}
+
+/* header */
+.header {
+  margin: 0;
+  margin-bottom: 0.1in;
+  font-family: monospace;
+  font-size: 115%;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* contact list */
+ul.custom-bullets {
+  list-style: none;
+}
+ul.custom-bullets li {
+  background-size: 12px 12px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+ul.custom-bullets li:before {
+  content: ""
+}
+li.bullet-email {
+  background-image: url("img/email.svg");
+}
+li.bullet-phone {
+  background-image: url("img/phone.svg");
+}
+li.bullet-linkedin {
+  background-image: url("img/linkedin.svg");
+}
+li.bullet-github {
+  background-image: url("img/github.svg");
+}
+li.bullet-website {
+  background-image: url("img/website.svg");
+}
+li.bullet-location {
+  background-image: url("img/location.svg");
+}
+
+/* print-specific styles */
+@media print {
+  .page {
+    margin: 0;
+  }
+  a:active, a:visited, a:-webkit-any-link {
+    color: darkblue;
+    text-decoration: underline;
+  }
+}
